@@ -1,25 +1,21 @@
 # MadKudu
 
-## Pre Requisites
+## Running the app
+
+### With the .NET Core SDK
 
 Download and install the .NET Core SDK from [.NET Downloads](https://dotnet.microsoft.com/download).
 
-## Run the app
+> dotnet publish -c Release -o out
 
-> dotnet publish
+> dotnet src/out/UserInfo.Api.dll
 
-Should output something like this
+### With Docker
 
-``` Microsoft (R) Build Engine version 15.9.20+g88f5fadfbe pour .NET Core
-Copyright (C) Microsoft Corporation. Tous droits réservés.
+>docker build -t mk .
 
-  Restauration des packages pour src/UserInfo.Api.csproj...
-  Génération du fichier MSBuild src/obj/UserInfo.Api.csproj.nuget.g.props.
-  Restauration effectuée dans 1,25 sec pour src/UserInfo.Api.csproj.
-  UserInfo.Api -> src/bin/Debug/netcoreapp2.0/UserInfo.Api.dll
-  UserInfo.Api -> src/bin/Debug/netcoreapp2.0/publish/
-  ```
+> docker run --rm -it -p 5000:5000 mk
 
-  > dotnet src/bin/Debug/netcoreapp2.0/publish/UserInfo.Api.dll
+## Playing with the app
 
-  `http://localhost:5000/swagger/` should now display the endpoints (also available on respectively `http://localhost:5000/page` and `http://localhost:5000/user/{userId}`)
+`http://localhost:5000/swagger/` should now display the endpoints (also available on respectively `http://localhost:5000/page` and `http://localhost:5000/user/{userId}`)
