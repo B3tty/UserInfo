@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{4AF5EC0C-ACF
 		TRD.md = TRD.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CassandraHelper", "src\CassandraHelper\CassandraHelper.csproj", "{4D52F0B9-A854-4787-8BDB-C6E3CAE79229}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,12 +24,17 @@ Global
 		{76BB7A5C-5041-4C6E-AB2A-FE69D16997F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76BB7A5C-5041-4C6E-AB2A-FE69D16997F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76BB7A5C-5041-4C6E-AB2A-FE69D16997F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D52F0B9-A854-4787-8BDB-C6E3CAE79229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D52F0B9-A854-4787-8BDB-C6E3CAE79229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D52F0B9-A854-4787-8BDB-C6E3CAE79229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D52F0B9-A854-4787-8BDB-C6E3CAE79229}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{76BB7A5C-5041-4C6E-AB2A-FE69D16997F6} = {BCC16B03-F302-417D-8893-811D028DA901}
+		{4D52F0B9-A854-4787-8BDB-C6E3CAE79229} = {BCC16B03-F302-417D-8893-811D028DA901}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EA9C10C3-89C0-400B-A63E-ECA883DADD82}

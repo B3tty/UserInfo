@@ -22,13 +22,34 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="1.1.0" />
     <PackageReference Include="System.Reactive" Version="3.1.1" />
     <PackageReference Include="System.Runtime.Caching" Version="4.6.0-preview.19073.11" />
+    <PackageReference Include="CassandraCSharpDriver" Version="3.8.0" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="appsettings.json" />
+    <None Remove="CassandraHelper\obj\CassandraHelper.csproj.nuget.g.props" />
+    <None Remove="CassandraHelper\obj\CassandraHelper.csproj.nuget.g.targets" />
+    <None Remove="CassandraHelper\obj\CassandraHelper.csproj.nuget.cache" />
+    <None Remove="CassandraHelper\obj\Debug\netstandard2.0\CassandraHelper.assets.cache" />
+    <None Remove="CassandraHelper\obj\Debug\netstandard2.0\CassandraHelper.csproj.CoreCompileInputs.cache" />
+    <None Remove="CassandraHelper\obj\Debug\netstandard2.0\CassandraHelper.AssemblyInfoInputs.cache" />
+    <None Remove="CassandraHelper\obj\Debug\netstandard2.0\CassandraHelper.dll" />
+    <None Remove="CassandraHelper\obj\Debug\netstandard2.0\CassandraHelper.pdb" />
+    <None Remove="CassandraHelper\obj\Debug\netstandard2.0\CassandraHelper.csproj.FileListAbsolute.txt" />
+    <None Remove="CassandraHelper\obj\Debug\netstandard2.0\CassandraHelper.csprojAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="CassandraHelper\obj\project.assets.json" />
+    <Content Remove="CassandraHelper\bin\Debug\netstandard2.0\CassandraHelper.deps.json" />
+    <Content Remove="CassandraHelper\bin\Debug\netstandard2.0\CassandraHelper.deps.json" />
+    <Content Remove="CassandraHelper\obj\project.assets.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="CassandraHelper\CassandraHelper.cs" />
+    <Compile Remove="CassandraHelper\obj\Debug\netstandard2.0\CassandraHelper.AssemblyInfo.cs" />
   </ItemGroup>
 </Project>

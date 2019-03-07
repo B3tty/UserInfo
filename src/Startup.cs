@@ -22,7 +22,8 @@ namespace UserInfo.Api
         
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddApiSwagger(_loggerFactory)
+            services.AddCassandra(_configuration)
+                    .AddApiSwagger(_loggerFactory)
                     .AddMvc();
         }
 
