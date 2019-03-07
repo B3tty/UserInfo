@@ -12,10 +12,10 @@ namespace UserInfo.Api
             return Ok();
         }
 
-        [HttpGet("user/{userId}")]
-        public async Task<IActionResult> GetUserInfo(string userId)
+        [HttpGet("user/{user_id}")]
+        public async Task<IActionResult> GetUserInfo(string user_id)
         {
-            var userInfo = new UserInfo();
+            var userInfo = new UserInfo { user_id = user_id };
             return Ok(userInfo);
         }
     }
