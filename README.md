@@ -1,6 +1,6 @@
 # User Info API
 
-## Running the app
+## Running the app on your computer
 
 ### With the .NET Core SDK
 
@@ -15,10 +15,6 @@ Download and install the .NET Core SDK from [.NET Downloads](https://dotnet.micr
 >docker build -t mk .
 
 > docker run --rm -it -p 5000:5000 mk
-
-## Playing with the app
-
-`http://localhost:5000/swagger/` should now display the endpoints (also available on respectively `http://localhost:5000/page` and `http://localhost:5000/user/{userId}`)
 
 ## Deploy on Heroku
 
@@ -40,9 +36,22 @@ heroku container:release web -a mk-bettym
 
 Re-Release quickly:
 
-```
+```sh
 docker build -t mk .
 heroku container:push web -a mk-bettym
 heroku container:release web -a mk-bettym
 ```
-Then go to https://mk-bettym.herokuapp.com/swagger/
+
+## Accessing the API
+
+* Local version
+
+  * <http://localhost:5000/swagger/>
+  * <http://localhost:5000/page>
+  * <http://localhost:5000/user/{userId}>
+
+* Heroku version
+
+  * <https://mk-bettym.herokuapp.com/swagger/>
+  * <https://mk-bettym.herokuapp.com/page>
+  * <https://mk-bettym.herokuapp.com/user/{userId}>
