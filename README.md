@@ -1,4 +1,4 @@
-# MadKudu
+# User Info API
 
 ## Running the app
 
