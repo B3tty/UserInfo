@@ -52,4 +52,8 @@
     <Compile Remove="CassandraHelper\CassandraHelper.cs" />
     <Compile Remove="CassandraHelper\obj\Debug\netstandard2.0\CassandraHelper.AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Storage\" />
+    <Folder Include="Objects\" />
+  </ItemGroup>
 </Project>

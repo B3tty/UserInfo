@@ -1,6 +1,6 @@
 using System.IO;
 using System.Reflection;
-using CassandraHelper;
+using UserInfo.Storage;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,9 +32,9 @@ namespace UserInfo.Api
             });
         }
 
-        public static IServiceCollection AddCassandra(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddCassandraHelper(this IServiceCollection services, IConfiguration configuration)
         {
-            return services.AddSingleton(new Helper(configuration["cassandra:host"], configuration["cassandra:script"]));
+            return services.AddSingleton(new CassandraHelper(configuration["cassandra:host"], configuration["cassandra:script"]));
         }
 
         public static IApplicationBuilder UseApiSwagger(this IApplicationBuilder app)

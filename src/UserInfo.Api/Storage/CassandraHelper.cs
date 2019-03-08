@@ -2,13 +2,13 @@
 using System.IO;
 using Cassandra;
 
-namespace CassandraHelper
+namespace UserInfo.Storage
 {
-    public class Helper
+    public class CassandraHelper
     {
         private readonly ISession _session;
 
-        public Helper(string host, string scriptFile)
+        public CassandraHelper(string host, string scriptFile)
         {
             _session = BuildSession(host);
             InitWithScript(scriptFile);
@@ -18,7 +18,7 @@ namespace CassandraHelper
         public static ISession BuildSession(string host)
         {
             var cluster = Cluster.Builder()
-                .AddContactPoints(host)
+                .AddContactPoint(host)
                 .Build();
 
             return cluster.Connect();

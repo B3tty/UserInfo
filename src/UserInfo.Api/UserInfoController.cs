@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using UserInfo.Objects;
 
 namespace UserInfo.Api
 {
@@ -15,7 +16,7 @@ namespace UserInfo.Api
         [HttpGet("user/{user_id}")]
         public async Task<IActionResult> GetUserInfo(string user_id)
         {
-            var userInfo = new UserInfo { user_id = user_id };
+            var userInfo = new UserHistoryInfo { user_id = user_id };
             return Ok(userInfo);
         }
     }

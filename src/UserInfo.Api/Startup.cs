@@ -22,7 +22,7 @@ namespace UserInfo.Api
         
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCassandra(_configuration)
+            services.AddCassandraHelper(_configuration)
                     .AddApiSwagger(_loggerFactory)
                     .AddMvc();
         }
