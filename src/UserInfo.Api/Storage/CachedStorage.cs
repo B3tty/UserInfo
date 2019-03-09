@@ -43,12 +43,12 @@ namespace UserInfo.Storage
 
         public UserHistoryInfo AggregateInfo(List<PageViewInfo> userHistory)
         {
-            var filtered = userHistory.Where(info => DateTime.Compare(info.DateStamp, DateTime.Today.AddDays(-7)) > 0).ToList();
+            var filtered = userHistory.Where(info => DateTime.Compare(info.TimeStamp.Date, DateTime.Today.AddDays(-7)) > 0).ToList();
 
             var pageCount = filtered.GroupBy(info => info.PageName).ToDictionary(gp => gp.Key, gp => gp.ToList().Count);
             var maxViews = pageCount.Values.Max();
 
-            var daysActive = filtered.Select(info => info.DateStamp.Date).Distinct();
+            var daysActive = filtered.Select(info => info.TimeStamp.Date).Distinct();
 
             return new UserHistoryInfo
             {

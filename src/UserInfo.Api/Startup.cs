@@ -22,7 +22,7 @@ namespace UserInfo.Api
         
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddStorage(_configuration)
+            services.AddStorage(_configuration, _hostingEnvironment)
                     .AddApiSwagger(_loggerFactory)
                     .AddMvc();
         }

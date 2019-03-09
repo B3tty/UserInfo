@@ -5,13 +5,13 @@ namespace UserInfo.Objects
     {
         public string UserId { get; set; }
         public string PageName { get; set; }
-        public DateTime DateStamp { get; set; }
+        public DateTime TimeStamp { get; set; }
 
         public PageViewInfo(UserInfoRequest request)
         {
             UserId = request.user_id;
             PageName = request.name;
-            DateStamp = request.timestamp.Date;
+            TimeStamp = request.timestamp;
         }
 
         public PageViewInfo()

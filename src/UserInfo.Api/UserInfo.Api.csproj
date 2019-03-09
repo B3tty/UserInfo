@@ -43,9 +43,17 @@
     <Content Remove="CassandraHelper\bin\Debug\netstandard2.0\CassandraHelper.deps.json" />
     <Content Remove="CassandraHelper\obj\project.assets.json" />
     <Content Remove="out\UserInfo.Api.deps.json" />
+    <Content Remove="out\out\UserInfo.Api.runtimeconfig.json" />
+    <Content Remove="out\out\out\UserInfo.Api.runtimeconfig.json" />
+    <Content Remove="Properties\l.config" />
+    <Content Remove="out\out\out\out\appsettings.json" />
+    <Content Remove="out\out\out\out\out\appsettings.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Properties\launchSettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

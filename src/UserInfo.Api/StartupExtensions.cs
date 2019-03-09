@@ -1,11 +1,12 @@
 using System.IO;
 using System.Reflection;
-using UserInfo.Storage;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.Swagger;
+using UserInfo.Storage;
 
 namespace UserInfo.Api
 {
@@ -32,10 +33,18 @@ namespace UserInfo.Api
             });
         }
 
-        public static IServiceCollection AddStorage(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddStorage(this IServiceCollection services, IConfiguration configuration, IHostingEnvironment hostingEnvironment)
         {
-            //return services.AddSingleton(new CassandraHelper(configuration["cassandra:host"], configuration["cassandra:script"]));
-            return services.AddSingleton<IUserStore>(new CachedStorage());
+            if (hostingEnvironment.EnvironmentName.ToLower().Equals("production"))
+            {
+                services.AddSingleton<IUserStore>(new CachedStorage());
+            }
+            else
+            {
+                var helper = new CassandraHelper(configuration["cassandra:host"], int.Parse(configuration["cassandra:port"]), configuration["cassandra:script"]);
+                services.AddSingleton<IUserStore>(new CassandraStorage(helper.Session));
+            }
+            return services;
         }
 
         public static IApplicationBuilder UseApiSwagger(this IApplicationBuilder app)

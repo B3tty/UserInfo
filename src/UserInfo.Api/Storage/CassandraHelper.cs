@@ -8,17 +8,20 @@ namespace UserInfo.Storage
     {
         private readonly ISession _session;
 
-        public CassandraHelper(string host, string scriptFile)
+        public ISession Session => _session;
+
+
+        public CassandraHelper(string host, int port, string scriptFile)
         {
-            _session = BuildSession(host);
+            _session = BuildSession(host, port);
             InitWithScript(scriptFile);
         }
 
-
-        public static ISession BuildSession(string host)
+        private static ISession BuildSession(string host, int port)
         {
             var cluster = Cluster.Builder()
                 .AddContactPoint(host)
+                .WithPort(port)
                 .Build();
 
             return cluster.Connect();
@@ -30,7 +33,7 @@ namespace UserInfo.Storage
                 .Replace("\n", string.Empty)
                 .Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries))
             {
-                _session.Execute(script);
+                Session.Execute(script);
             }
         }
     }
