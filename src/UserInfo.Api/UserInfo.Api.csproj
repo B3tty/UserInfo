@@ -42,6 +42,7 @@
     <Content Remove="CassandraHelper\bin\Debug\netstandard2.0\CassandraHelper.deps.json" />
     <Content Remove="CassandraHelper\bin\Debug\netstandard2.0\CassandraHelper.deps.json" />
     <Content Remove="CassandraHelper\obj\project.assets.json" />
+    <Content Remove="out\UserInfo.Api.deps.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="appsettings.json">

@@ -32,9 +32,10 @@ namespace UserInfo.Api
             });
         }
 
-        public static IServiceCollection AddCassandraHelper(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddStorage(this IServiceCollection services, IConfiguration configuration)
         {
-            return services.AddSingleton(new CassandraHelper(configuration["cassandra:host"], configuration["cassandra:script"]));
+            //return services.AddSingleton(new CassandraHelper(configuration["cassandra:host"], configuration["cassandra:script"]));
+            return services.AddSingleton<IUserStore>(new CachedStorage());
         }
 
         public static IApplicationBuilder UseApiSwagger(this IApplicationBuilder app)

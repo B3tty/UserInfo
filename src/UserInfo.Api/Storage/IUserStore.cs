@@ -3,7 +3,7 @@ using UserInfo.Objects;
 
 namespace UserInfo.Storage
 {
-    public interface UserStore
+    public interface IUserStore
     {
         void StoreInfo(PageViewInfo info);
 
