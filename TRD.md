@@ -24,7 +24,7 @@ I want to be able to fetch data bout a specific user id. The data I need to fetc
     "user_id": "019mr8mf4r",
     "number_pages_viewed_the_last_7_days": 21,
     "time_spent_on_site_last_7_days": 18,
-    "number_of_days_active_last_7 _days": 3,
+    "number_of_days_active_last_7_days": 3,
     "most_viewed_page_last_7_days": "Blog: better B2B customer experience"
 }
 ```
@@ -42,7 +42,15 @@ We want to get info from the last 7 days. So we want to be able to filter the da
 * we can clean the "deprecated" data
 * we only need a timestamp with the day, not time
 
-### Option 1 - "simple database" option
+### Option 1 - "Cached" option
+
+#### Pros
+* Really simple to implement
+#### Cons
+* Cache is not persisted so we lose data when the service restarts
+* If lots of data, memory will be a problem
+
+### Option 2 - "simple database" option
 
 * when receiving info with page endpoint, storing in DB with timestamp
 * when "user" is called, filter data according to timestamp and aggregate data
@@ -56,7 +64,7 @@ We want to get info from the last 7 days. So we want to be able to filter the da
   - we could index the data by day to make the filtering by date quicker, but then filtering on userId?
   - if we index by day, it's still okay for a wider interval, but we'd have to reindex if we want a narrower interval
 
-### Option 2 - "cleaned database" option
+### Option 3 - "cleaned database" option
 
 * when receiving info with page endpoint, storing in DB with timestamp
 * put a TTL of 7 days on data
@@ -69,7 +77,7 @@ We want to get info from the last 7 days. So we want to be able to filter the da
 #### Cons
 * We lose the old data, so if we want to switch to a 1-month interval, at first we'll be missing data
 
-### Option 3 - "event sourcing" option
+### Option 4 - "event sourcing" option
 
 * when receiving info with the page endpoint, send an event to a kafka bus (for example)
 * the kafka bus listens to these events, and then aggregates them in a db

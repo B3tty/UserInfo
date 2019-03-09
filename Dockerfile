@@ -14,5 +14,5 @@ RUN dotnet publish -c Release -o out
 # Build runtime image
 FROM microsoft/dotnet:aspnetcore-runtime AS runtime
 WORKDIR /app
-COPY --from=build /app/src/out .
+COPY --from=build /app/src/UserInfo.Api/out .
 CMD ASPNETCORE_URLS=http://*:$PORT dotnet UserInfo.Api.dll
