@@ -11,14 +11,14 @@ Download and install the .NET Core SDK from [.NET Downloads](https://dotnet.micr
 #### Cached Version
 
 ```sh
-$ ASPNETCORE_ENVIRONMENT=Production
+$ export ASPNETCORE_ENVIRONMENT=Production
 $ dotnet run --project src/UserInfo.Api/UserInfo.Api.csproj
 ```
 
 #### Simple Cassandra version
 
 ```sh
-$ ASPNETCORE_ENVIRONMENT=local
+$ export ASPNETCORE_ENVIRONMENT=local
 $ dotnet run --project src/UserInfo.Api/UserInfo.Api.csproj
 ```
 
