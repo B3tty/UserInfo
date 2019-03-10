@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Cassandra;
 using UserInfo.Objects;
 
@@ -22,14 +23,15 @@ namespace UserInfo.Storage
         }
 
 
-        public void StoreInfo(PageViewInfo info)
+        public async Task StoreInfo(PageViewInfo info)
         {
-            _session.ExecuteAsync(_insertStatement.Bind(info.UserId, info.TimeStamp, info.PageName));
+            await _session.ExecuteAsync(_insertStatement.Bind(info.UserId, info.TimeStamp, info.PageName));
         }
 
-        public UserHistoryInfo GetInfo(string userId)
+        public async Task<UserHistoryInfo> GetInfo(string userId)
         {
-            var recentRows = _session.Execute(_selectStatement.Bind(userId)).GetRows().ToList();
+            var result = await _session.ExecuteAsync(_selectStatement.Bind(userId));
+            var recentRows = result.GetRows().ToList();
 
             var aggreg = new UserHistoryInfo();
             if (recentRows.Count > 0)
@@ -40,9 +42,9 @@ namespace UserInfo.Storage
             return aggreg;
         }
 
-        public void DeleteInfo(string userId)
+        public async Task DeleteInfo(string userId)
         {
-            _session.Execute(_deleteStatement.Bind(userId));
+            await _session.ExecuteAsync(_deleteStatement.Bind(userId));
         }
 
         private UserHistoryInfo AggregateInfo(List<Row> rows)

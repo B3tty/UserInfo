@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UserInfo.Objects;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace UserInfo.Storage
 {
@@ -15,7 +16,7 @@ namespace UserInfo.Storage
         }
 
 
-        public void StoreInfo(PageViewInfo info)
+        public Task StoreInfo(PageViewInfo info)
         {
             var exists = _cache.TryGetValue(info.UserId, out List<PageViewInfo> entry);
             if (exists)
@@ -26,9 +27,10 @@ namespace UserInfo.Storage
             {
                 _cache.Add(info.UserId, new List<PageViewInfo> { info });
             }
+            return Task.CompletedTask;
         }
 
-        public UserHistoryInfo GetInfo(string userId)
+        public Task<UserHistoryInfo> GetInfo(string userId)
         {
             var exists = _cache.TryGetValue(userId, out List<PageViewInfo> entry);
             var aggreg = new UserHistoryInfo();
@@ -37,12 +39,13 @@ namespace UserInfo.Storage
                 aggreg = AggregateInfo(entry);
             }
             aggreg.user_id = userId;
-            return aggreg;
+            return Task.FromResult(aggreg);
         }
 
-        public void DeleteInfo(string user_id)
+        public Task DeleteInfo(string user_id)
         {
             _cache.Remove(user_id);
+            return Task.CompletedTask;
         }
 
         private UserHistoryInfo AggregateInfo(List<PageViewInfo> userHistory)

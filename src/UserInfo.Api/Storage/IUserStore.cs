@@ -1,14 +1,15 @@
 ﻿using System;
+using System.Threading.Tasks;
 using UserInfo.Objects;
 
 namespace UserInfo.Storage
 {
     public interface IUserStore
     {
-        void StoreInfo(PageViewInfo info);
+        Task StoreInfo(PageViewInfo info);
 
-        UserHistoryInfo GetInfo(string userId);
+        Task<UserHistoryInfo> GetInfo(string userId);
 
-        void DeleteInfo(string user_id);
+        Task DeleteInfo(string user_id);
     }
 }
