@@ -34,6 +34,7 @@ Install [Docker](https://www.docker.com/get-started)
 docker build -t mk .
 
 # Be sure to have a heroku account, that the app is created there, and that you have Heroku CLI installed.
+# 'mk-bettym' is the name of the heroku app
 
 heroku login
 heroku container:login

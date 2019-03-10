@@ -14,7 +14,6 @@ When on a page, I need to post data about the current page and the user currentl
 }
 ```
 
-
 ### "User" Endpoint
 
 I want to be able to fetch data bout a specific user id. The data I need to fetch is:
@@ -29,7 +28,7 @@ I want to be able to fetch data bout a specific user id. The data I need to fetc
 }
 ```
 
-## Brainstorming on technical aspect
+## Brainstorming on technical aspects
 
 In the end, we want something like this :
 
@@ -43,6 +42,9 @@ We want to get info from the last 7 days. So we want to be able to filter the da
 * we only need a timestamp with the day, not time
 
 ### Option 1 - "Cached" option
+
+* when receiving data, store it in a simple cache
+* Aggregate from cache when "user" endpoint is called
 
 #### Pros
 * Really simple to implement
