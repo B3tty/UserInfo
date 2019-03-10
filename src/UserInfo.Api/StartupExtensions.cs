@@ -35,6 +35,7 @@ namespace UserInfo.Api
 
         public static IServiceCollection AddStorage(this IServiceCollection services, IConfiguration configuration, IHostingEnvironment hostingEnvironment)
         {
+            // CachedStorage is the one deployed on production to ease heroku deployment
             if (hostingEnvironment.EnvironmentName.ToLower().Equals("production"))
             {
                 services.AddSingleton<IUserStore>(new CachedStorage());
