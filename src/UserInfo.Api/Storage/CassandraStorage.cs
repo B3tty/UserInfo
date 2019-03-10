@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using UserInfo.Objects;
 using System.Linq;
 using Cassandra;
-using System.Threading.Tasks;
+using UserInfo.Objects;
 
 namespace UserInfo.Storage
 {
@@ -12,12 +11,14 @@ namespace UserInfo.Storage
         private static ISession _session;
         private readonly PreparedStatement _insertStatement;
         private readonly PreparedStatement _selectStatement;
+        private readonly PreparedStatement _deleteStatement;
 
         public CassandraStorage(ISession session)
         {
             _session = session;
             _insertStatement = _session.Prepare("INSERT INTO mk.page_info_by_user (user_id, time_stamp, page_name) VALUES (?, ?, ?)");
             _selectStatement = _session.Prepare("SELECT time_stamp, page_name FROM mk.page_info_by_user WHERE user_id = ?");
+            _deleteStatement = _session.Prepare("DELETE FROM mk.page_info_by_user WHERE user_id = ?");
         }
 
 
@@ -30,8 +31,6 @@ namespace UserInfo.Storage
         {
             var recentRows = _session.Execute(_selectStatement.Bind(userId)).GetRows().ToList();
 
-
-
             var aggreg = new UserHistoryInfo();
             if (recentRows.Count > 0)
             {
@@ -41,7 +40,12 @@ namespace UserInfo.Storage
             return aggreg;
         }
 
-        public UserHistoryInfo AggregateInfo(List<Row> rows)
+        public void DeleteInfo(string userId)
+        {
+            _session.Execute(_deleteStatement.Bind(userId));
+        }
+
+        private UserHistoryInfo AggregateInfo(List<Row> rows)
         {
             var filtered = rows.Where(row => DateTime.Compare(row.GetValue<DateTime>("time_stamp"), DateTime.Today.AddDays(-7)) > 0).ToList();
 

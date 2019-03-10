@@ -8,5 +8,7 @@ namespace UserInfo.Storage
         void StoreInfo(PageViewInfo info);
 
         UserHistoryInfo GetInfo(string userId);
+
+        void DeleteInfo(string user_id);
     }
 }

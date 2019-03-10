@@ -30,7 +30,6 @@ namespace UserInfo.Storage
 
         public UserHistoryInfo GetInfo(string userId)
         {
-
             var exists = _cache.TryGetValue(userId, out List<PageViewInfo> entry);
             var aggreg = new UserHistoryInfo();
             if (exists)
@@ -41,7 +40,12 @@ namespace UserInfo.Storage
             return aggreg;
         }
 
-        public UserHistoryInfo AggregateInfo(List<PageViewInfo> userHistory)
+        public void DeleteInfo(string user_id)
+        {
+            _cache.Remove(user_id);
+        }
+
+        private UserHistoryInfo AggregateInfo(List<PageViewInfo> userHistory)
         {
             var filtered = userHistory.Where(info => DateTime.Compare(info.TimeStamp.Date, DateTime.Today.AddDays(-7)) > 0).ToList();
 

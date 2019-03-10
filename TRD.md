@@ -28,6 +28,10 @@ I want to be able to fetch data bout a specific user id. The data I need to fetc
 }
 ```
 
+### "Delete" Endpoint
+
+Delete all info about user `user_id`
+
 ## Brainstorming on technical aspects
 
 In the end, we want something like this :

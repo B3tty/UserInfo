@@ -29,5 +29,12 @@ namespace UserInfo.Api
             var userInfo = _userStore.GetInfo(user_id);
             return Ok(userInfo);
         }
+
+        [HttpDelete("USER/{user_id}")]
+        public async Task<IActionResult> DeleteUserInfo(string user_id)
+        {
+            _userStore.DeleteInfo(user_id);
+            return Ok();
+        }
     }
 }
