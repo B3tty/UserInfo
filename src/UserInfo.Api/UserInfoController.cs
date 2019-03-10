@@ -26,7 +26,7 @@ namespace UserInfo.Api
         [HttpGet("user/{user_id}")]
         public async Task<IActionResult> GetUserInfo(string user_id)
         {
-            var userInfo = await _userStore.GetInfo(user_id);
+            UserHistoryInfo userInfo = await _userStore.GetInfo(user_id);
             return Ok(userInfo);
         }
 
