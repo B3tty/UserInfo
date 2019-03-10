@@ -36,6 +36,129 @@
     <None Remove="CassandraHelper\obj\Debug\netstandard2.0\CassandraHelper.pdb" />
     <None Remove="CassandraHelper\obj\Debug\netstandard2.0\CassandraHelper.csproj.FileListAbsolute.txt" />
     <None Remove="CassandraHelper\obj\Debug\netstandard2.0\CassandraHelper.csprojAssemblyReference.cache" />
+    <None Remove="cassandra.cql" />
+    <None Remove="out\Microsoft.AspNetCore.Authorization.Policy.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Connections.Abstractions.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Cors.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Cryptography.Internal.dll" />
+    <None Remove="out\Microsoft.AspNetCore.DataProtection.Abstractions.dll" />
+    <None Remove="out\Microsoft.AspNetCore.DataProtection.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Diagnostics.Abstractions.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Hosting.Abstractions.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Hosting.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Html.Abstractions.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Http.Abstractions.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Http.Extensions.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Http.Features.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Http.dll" />
+    <None Remove="out\Microsoft.AspNetCore.JsonPatch.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Localization.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Mvc.Abstractions.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Mvc.ApiExplorer.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Mvc.Core.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Mvc.Cors.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Mvc.DataAnnotations.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Mvc.Formatters.Json.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Mvc.Localization.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Mvc.Razor.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Mvc.RazorPages.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Mvc.TagHelpers.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Mvc.ViewFeatures.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Mvc.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Razor.Language.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Razor.Runtime.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Razor.dll" />
+    <None Remove="out\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Routing.Abstractions.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Routing.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Server.Kestrel.Core.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Server.Kestrel.Https.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll" />
+    <None Remove="out\Microsoft.AspNetCore.Server.Kestrel.dll" />
+    <None Remove="out\Microsoft.AspNetCore.StaticFiles.dll" />
+    <None Remove="out\Microsoft.AspNetCore.WebUtilities.dll" />
+    <None Remove="out\Microsoft.CodeAnalysis.CSharp.dll" />
+    <None Remove="out\Microsoft.CodeAnalysis.Razor.dll" />
+    <None Remove="out\Microsoft.CodeAnalysis.dll" />
+    <None Remove="out\Microsoft.DotNet.PlatformAbstractions.dll" />
+    <None Remove="out\Microsoft.Extensions.Caching.Abstractions.dll" />
+    <None Remove="out\Microsoft.Extensions.Caching.Memory.dll" />
+    <None Remove="out\Microsoft.Extensions.Configuration.Abstractions.dll" />
+    <None Remove="out\Microsoft.Extensions.Configuration.Binder.dll" />
+    <None Remove="out\Microsoft.Extensions.Configuration.EnvironmentVariables.dll" />
+    <None Remove="out\Microsoft.Extensions.Configuration.FileExtensions.dll" />
+    <None Remove="out\Microsoft.Extensions.Configuration.Json.dll" />
+    <None Remove="out\Microsoft.Extensions.Configuration.dll" />
+    <None Remove="out\Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+    <None Remove="out\Microsoft.Extensions.DependencyInjection.dll" />
+    <None Remove="out\Microsoft.Extensions.DependencyModel.dll" />
+    <None Remove="out\Microsoft.Extensions.FileProviders.Abstractions.dll" />
+    <None Remove="out\Microsoft.Extensions.FileProviders.Composite.dll" />
+    <None Remove="out\Microsoft.Extensions.FileProviders.Embedded.dll" />
+    <None Remove="out\Microsoft.Extensions.FileProviders.Physical.dll" />
+    <None Remove="out\Microsoft.Extensions.FileSystemGlobbing.dll" />
+    <None Remove="out\Microsoft.Extensions.Hosting.Abstractions.dll" />
+    <None Remove="out\Microsoft.Extensions.Localization.Abstractions.dll" />
+    <None Remove="out\Microsoft.Extensions.Localization.dll" />
+    <None Remove="out\Microsoft.Extensions.Logging.Abstractions.dll" />
+    <None Remove="out\Microsoft.Extensions.Logging.Debug.dll" />
+    <None Remove="out\Microsoft.Extensions.Logging.dll" />
+    <None Remove="out\Microsoft.Extensions.ObjectPool.dll" />
+    <None Remove="out\Microsoft.Extensions.Options.dll" />
+    <None Remove="out\Microsoft.Extensions.Primitives.dll" />
+    <None Remove="out\Microsoft.Extensions.WebEncoders.dll" />
+    <None Remove="out\Microsoft.Net.Http.Headers.dll" />
+    <None Remove="out\Microsoft.Win32.Registry.dll" />
+    <None Remove="out\Newtonsoft.Json.Bson.dll" />
+    <None Remove="out\Newtonsoft.Json.dll" />
+    <None Remove="out\Serilog.AspNetCore.dll" />
+    <None Remove="out\Serilog.Extensions.Logging.dll" />
+    <None Remove="out\Serilog.Sinks.Console.dll" />
+    <None Remove="out\Serilog.dll" />
+    <None Remove="out\Swashbuckle.AspNetCore.Swagger.dll" />
+    <None Remove="out\Swashbuckle.AspNetCore.SwaggerGen.dll" />
+    <None Remove="out\Swashbuckle.AspNetCore.SwaggerUI.dll" />
+    <None Remove="out\Swashbuckle.AspNetCore.dll" />
+    <None Remove="out\Swashbuckle.Swagger.dll" />
+    <None Remove="out\System.Collections.Immutable.dll" />
+    <None Remove="out\System.Configuration.ConfigurationManager.dll" />
+    <None Remove="out\System.Diagnostics.DiagnosticSource.dll" />
+    <None Remove="out\System.IO.Pipelines.dll" />
+    <None Remove="out\System.Memory.dll" />
+    <None Remove="out\System.Reactive.Core.dll" />
+    <None Remove="out\System.Reactive.Interfaces.dll" />
+    <None Remove="out\System.Reactive.Linq.dll" />
+    <None Remove="out\System.Reactive.PlatformServices.dll" />
+    <None Remove="out\System.Reflection.Metadata.dll" />
+    <None Remove="out\System.Runtime.Caching.dll" />
+    <None Remove="out\System.Runtime.CompilerServices.Unsafe.dll" />
+    <None Remove="out\System.Security.AccessControl.dll" />
+    <None Remove="out\System.Security.Cryptography.Cng.dll" />
+    <None Remove="out\System.Security.Cryptography.Pkcs.dll" />
+    <None Remove="out\System.Security.Cryptography.ProtectedData.dll" />
+    <None Remove="out\System.Security.Cryptography.Xml.dll" />
+    <None Remove="out\System.Security.Permissions.dll" />
+    <None Remove="out\System.Security.Principal.Windows.dll" />
+    <None Remove="out\System.Text.Encodings.Web.dll" />
+    <None Remove="out\System.Threading.Tasks.Extensions.dll" />
+    <None Remove="out\UserInfo.Api.dll" />
+    <None Remove="out\UserInfo.Api.pdb" />
+    <None Remove="out\UserInfo.Api.xml" />
+    <None Remove="out\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll" />
+    <None Remove="out\runtimes\unix\lib\netcoreapp2.0\System.Security.Principal.Windows.dll" />
+    <None Remove="out\runtimes\unix\lib\netstandard1.3\System.Text.Encoding.CodePages.dll" />
+    <None Remove="out\runtimes\unix\lib\netstandard2.0\Microsoft.Win32.Registry.dll" />
+    <None Remove="out\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll" />
+    <None Remove="out\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll" />
+    <None Remove="out\runtimes\win\lib\netcoreapp2.0\System.Security.Cryptography.Cng.dll" />
+    <None Remove="out\runtimes\win\lib\netcoreapp2.0\System.Security.Principal.Windows.dll" />
+    <None Remove="out\runtimes\win\lib\netstandard1.3\System.Text.Encoding.CodePages.dll" />
+    <None Remove="out\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll" />
+    <None Remove="out\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.Pkcs.dll" />
+    <None Remove="out\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="CassandraHelper\obj\project.assets.json" />
@@ -48,12 +171,31 @@
     <Content Remove="Properties\l.config" />
     <Content Remove="out\out\out\out\appsettings.json" />
     <Content Remove="out\out\out\out\out\appsettings.json" />
+    <Content Remove="out\appsettings.docker.json" />
+    <Content Remove="out\out\appsettings.local.json" />
+    <Content Remove="out\out\out\appsettings.local.json" />
+    <Content Remove="out\appsettings.json" />
+    <Content Remove="out\appsettings.docker.json" />
+    <Content Remove="out\appsettings.local.json" />
+    <Content Remove="out\UserInfo.Api.runtimeconfig.json" />
+    <Content Remove="out\out\appsettings.json" />
+    <Content Remove="out\out\out\appsettings.json" />
+    <Content Remove="out\out\out\out\appsettings.json" />
+    <Content Remove="out\out\out\out\out\appsettings.json" />
+    <Content Remove="out\out\appsettings.local.json" />
+    <Content Remove="out\out\out\appsettings.local.json" />
+    <Content Remove="out\web.config" />
+    <Content Remove="out\out\web.config" />
+    <Content Remove="out\out\out\web.config" />
+    <Content Remove="out\out\out\out\web.config" />
+    <Content Remove="out\out\out\out\out\web.config" />
+    <Content Remove="out\out\out\out\out\out\web.config" />
+    <Content Remove="out\out\out\out\out\out\out\web.config" />
+    <Content Remove="out\out\out\out\out\out\out\out\web.config" />
+    <Content Remove="out\out\out\out\out\out\out\out\out\web.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="appsettings.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Properties\launchSettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Update="appsettings %28copie%29.json">
@@ -81,5 +223,10 @@
     <None Update="cassandra.cql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="cassandra.cql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
