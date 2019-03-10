@@ -6,9 +6,10 @@
 
 Download and install the .NET Core SDK from [.NET Downloads](https://dotnet.microsoft.com/download).
 
-> dotnet publish -c Release -o out
-
-> dotnet src/UserInfo.Api/out/UserInfo.Api.dll
+```sh
+$ dotnet publish -c Release -o out
+$ dotnet src/UserInfo.Api/out/UserInfo.Api.dll
+````
 
 ### With Docker
 
@@ -16,15 +17,18 @@ The cached version is the one chosen from production because of Heroku deploymen
 
 #### Cached version
 
-> docker build -t mk .
-
-> docker run --rm -it -p 5000:5000 -e ASPNETCORE_ENVIRONMENT="Production" mk
+```sh
+$ docker build -t mk .
+$ docker run --rm -it -p 5000:5000 -e ASPNETCORE_ENVIRONMENT="Production" mk
+```
 
 #### Simple Cassandra version
 
-> docker run -p 9042:9042 --name mk-cassandra -d cassandra:latest
-
-> docker run --rm -it -d -p 5000:5000 -e ASPNETCORE_ENVIRONMENT="local" --link mk-cassandra:cassandra mk
+```sh
+$ docker run -p 9042:9042 --name mk-cassandra -d cassandra:latest
+$ docker build -t mk .
+$ docker run --rm -it -d -p 5000:5000 -e ASPNETCORE_ENVIRONMENT="local" --link mk-cassandra:cassandra mk
+```
 
 ## Deploy on Heroku
 
