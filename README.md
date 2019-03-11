@@ -71,11 +71,13 @@ heroku container:release web -a mk-bettym
 * Local version
 
   * <http://localhost:5000/swagger/>
-  * <http://localhost:5000/page>
-  * <http://localhost:5000/user/{userId}>
+  * <http://localhost:5000/v1/page>
+  * <http://localhost:5000/v1/user/{userId}>
+  * <http://localhost:5000/v1/delete/{userId}>
 
 * Heroku version
 
   * <https://mk-bettym.herokuapp.com/swagger/>
-  * <https://mk-bettym.herokuapp.com/page>
-  * <https://mk-bettym.herokuapp.com/user/{userId}>
+  * <https://mk-bettym.herokuapp.com/v1/page>
+  * <https://mk-bettym.herokuapp.com/v1/user/{userId}>
+  * <https://mk-bettym.herokuapp.com/v1/delete/{userId}>
