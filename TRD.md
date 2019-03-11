@@ -100,7 +100,7 @@ We want to get info from the last 7 days. So we want to be able to filter the da
 
 ### Architecture
 
-![schema1.jpg]
+![](schema1.jpg)
 
 ### Database schema
 
