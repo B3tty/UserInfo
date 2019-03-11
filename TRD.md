@@ -95,3 +95,17 @@ We want to get info from the last 7 days. So we want to be able to filter the da
 * Once again the db only contains the needed info, so less data to store
 #### Cons
 * More difficult to implement, bigger TTM
+
+## Specs
+
+### Architecture
+
+![schema1.jpg]
+
+### Database schema
+
+
+
+### Time spent on the site
+
+Based on the data in the examples, we are going to return the interval of time the user has spent on the website, in minutes. For that, we are going to consider that in one session on the website, a user spends `LastPage.Time - FirstPage.Time + 1` minutes on the site. We are also considering that if there is more than 30 minutes between two pages, it's a different session.
