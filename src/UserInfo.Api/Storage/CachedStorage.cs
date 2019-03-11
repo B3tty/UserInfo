@@ -60,7 +60,7 @@ namespace UserInfo.Storage
             return new UserHistoryInfo
             {
                 number_pages_viewed_the_last_7_days = pageCount.Keys.Count,
-                time_spent_on_site_last_7_days = 0,
+                time_spent_on_site_last_7_days = IntervalHelper.GetMinutesSpentOnSite(filtered.Select(i => i.TimeStamp).ToList()),
                 number_of_days_active_last_7_days = daysActive.Count(),
                 most_viewed_page_last_7_days = pageCount.First(kv => kv.Value == maxViews).Key
             };
