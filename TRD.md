@@ -102,9 +102,24 @@ We want to get info from the last 7 days. So we want to be able to filter the da
 
 ![](schema1.jpg)
 
+Storage: Multiple implementations:
+* Cache implementation (environment "Production" so that it works correctly on Heroku)
+* Simple Cassandra implementation (other environments, connecting to the respective cassandra instances)
+
 ### Database schema
 
+#### Cache
 
+Really naive structure for the cache, as its primary goal is really to be the simplest POC possible
+
+UserId => List of all the pieces of information sent relative to this user
+
+#### Cassandra
+
+* Columns : UserId, TimeStamp, PageName
+* Primary Key: (UserId, TimeStamp)
+
+With this primary key, we are going to ignore multiple events occuring at the same time, but with the precision of timestamp, it's probably a mistake if two events are sent with the exact same one. Having it as a primary key will allow us to filter more efficiently directly with our requests.
 
 ### Time spent on the site
 
