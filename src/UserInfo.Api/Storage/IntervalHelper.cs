@@ -37,6 +37,10 @@ namespace UserInfo.Storage
                     }
                 }
                 intervals.Add((first, last));
+                if (range.Count() == 0)
+                {
+                    break;
+                }
             }
             return intervals;
         }

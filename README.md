@@ -18,6 +18,7 @@ $ dotnet run --project src/UserInfo.Api/UserInfo.Api.csproj
 #### Simple Cassandra version
 
 ```sh
+$ docker run -p 9042:9042 --name mk-cassandra -d cassandra:latest
 $ export ASPNETCORE_ENVIRONMENT=local
 $ dotnet run --project src/UserInfo.Api/UserInfo.Api.csproj
 ```
