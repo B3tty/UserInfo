@@ -1,6 +1,6 @@
 # User Info API
 
-This API was developed primarily for an interview process. The corresponding instructions can be found [here](instructions.md). I also wrote some [specifications](TRD.md)
+This API was developed primarily for an interview process. The corresponding instructions can be found [here](doc/instructions.md). I also wrote some [specifications](doc/TRD.md)
 
 ## Running the app on your computer
 
