@@ -1,5 +1,7 @@
 # User Info API
 
+This API was developed primarily for an interview process. The corresponding instructions can be found [here](doc/instructions.md). I also wrote some [specifications](doc/TRD.md)
+
 ## Running the app on your computer
 
 The cached version is the one chosen from production because of Heroku deployment, but the Cassandra version would be a better choice for a real production environment.
