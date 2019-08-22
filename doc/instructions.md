@@ -2,15 +2,15 @@
 
 ## Project description
 
-## Why this project
+### Why this project
 
 The objective is to make this a good and fun way to discover how it would look like working together on a data engineering project.
 
-## Instructions
+### Instructions
 
 Please do as much or as little as we want. Expectations is to spend between 2 and 4 hours of work to document a TRD (1-2 pages) and build a functional POC.
 
-## How to make this project fun and effective
+### How to make this project fun and effective
 
 Here are some tips:
 
